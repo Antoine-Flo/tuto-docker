@@ -1,6 +1,8 @@
 # **Tutoriel Docker**
+👋 Bienvenue sur ce tutoriel à la découverte de Docker.
+Retrouver [la vidéo sur la chaîne.]()
 
-
+***
 ## 📖 **Définitions**
 
 <ins>Image</ins> : Modéle à partir duquel sera créé un ou des containers.<br>
