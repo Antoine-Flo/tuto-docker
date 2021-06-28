@@ -126,3 +126,28 @@ CMD
 
 WORKDIR
 ```
+
+## 📁 **Dockerfile**
+### Etapes
+1. Créer fichier `docker-compose-yaml`
+1. Décrire étape de création du setup
+1. `docker-compose up`
+
+### Référence
+```yaml
+version: "3.9"  # optional since v1.27.0
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/code
+      - logvolume01:/var/log
+    links:
+      - redis
+  redis:
+    image: redis
+volumes:
+  logvolume01: {}
+```
