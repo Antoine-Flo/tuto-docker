@@ -1,0 +1,23 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "👋 Bienvenue sur ce tutoriel à la découverte de Docker.\r Retrouvez [la vidéo sur la chaîne.]()",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Antoine-Flo/tuto-docker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Antoine-Flo/tuto-docker/issues"
+  },
+  "homepage": "https://github.com/Antoine-Flo/tuto-docker#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,6 +1,6 @@
 # **Tutoriel Docker**
 👋 Bienvenue sur ce tutoriel à la découverte de Docker.
-Retrouver [la vidéo sur la chaîne.]()
+Retrouvez [la vidéo sur la chaîne.]()
 
 ***
 ## 📖 **Définitions**
@@ -31,7 +31,7 @@ docker
 // Liste les commandes et les familles de commande
 
 docker system info
-// Affiche information au sujet du système
+// Affiche informations au sujet du système
 
 docker image ls 
 // Liste les images (ou 'docker images')
@@ -41,8 +41,6 @@ docker image history myImage:0.0.0
 
 docker container -a ls 
 // Liste les containers, même inactif (ou 'docker ps -a')
-
-docker 
 ```
 
 ### Executer
@@ -106,6 +104,9 @@ LABEL my.image.version="0.0.1"
 RUN npm install
 # Exécuter commandes
 
+WORKDIR /usr/src/app
+# Crée dossier si n'existe pas, cd dedans
+
 COPY . /app
 # Copie fichiers locaux dans container. Source | Destination
 
@@ -123,11 +124,9 @@ ENTRYPOINT ["cmd", "param1", "param2"]
 
 CMD 
 # Commande optionnel
-
-WORKDIR
 ```
 
-## 📁 **Dockerfile**
+## 🕸 **docker-compose**
 ### Etapes
 1. Créer fichier `docker-compose-yaml`
 1. Décrire étape de création du setup
