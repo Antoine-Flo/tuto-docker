@@ -3,7 +3,7 @@
 Retrouvez [la vidéo sur la chaîne.]()
 
 ***
-## 📖 **Définitions**
+## 📖 **Terminologie**
 
 <ins>Image</ins> : *Modéle à partir duquel sera créé un ou des containers.*<br>
 
