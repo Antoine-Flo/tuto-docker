@@ -67,8 +67,11 @@ docker run -it --rm ubuntu bash
 
 ### Volume
 ```js
-docker volume create myvolume
-// Crée un espace de stockage
+docker volume create pgdata
+// Crée le volume
+
+docker run -it --rm -v pgdata:/var/lib/postgresql/data -e POSTGRES_PASSWORD=mysecretpassword postgres
+
 ```
 
 ### Arrêter / Supprimer
@@ -131,22 +134,30 @@ CMD
 1. Créer fichier `docker-compose-yaml`
 1. Décrire étape de création du setup
 1. `docker-compose up`
+1. `docker-compose down`
 
-### Référence
+### Exemple
 ```yaml
-version: "3.9"  # optional since v1.27.0
+
 services:
-  web:
-    build: .
-    ports:
-      - "5000:5000"
-    volumes:
-      - .:/code
-      - logvolume01:/var/log
-    links:
-      - redis
-  redis:
-    image: redis
+    app:
+      build: .
+      depends_on:
+        - postgres
+      environment:
+          DATABASE_URL: postgres://user:pass@postgres:5432/db
+          NODE_ENV: development
+      ports:
+        - "3000:3000"
+  
+  
+    postgres:
+      image: postgres:alpine
+      environment:
+        POSTGRES_PASSWORD: postgres
+      volumes:
+          - data:/var/lib/postgresql/data
+  
 volumes:
-  logvolume01: {}
+    data:
 ```
