@@ -1,6 +1,6 @@
 # **Tutoriel Docker**
 👋 Bienvenue sur ce tutoriel à la découverte de Docker.
-Retrouvez [la vidéo sur la chaîne.]()
+Retrouvez [la vidéo sur la chaîne.]() (à venir).
 
 ***
 ## 📖 **Terminologie**
