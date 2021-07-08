@@ -1,6 +1,20 @@
 # Exemple 1
 1. Créer l'app express
 
+```js
+const express = require('express')
+const app = express()
+const port = 8080
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`App listening port ${port}`)
+})
+```
+
 1. Créer Dockerfile
 ```dockerfile
 FROM node:alpine
